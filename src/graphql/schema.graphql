@@ -1,0 +1,20 @@
+type Habitacion {
+  HabNum: Int,
+  HabNom: String,
+  HabEstado: String,
+  HabOcupada: String
+}
+type Moneda {
+  MonId: Int,
+  MonDsc: String,
+  MonSim: String,
+  MonCodCon: Float,
+  MonContab: Int,
+  MonFE: String
+}
+type Query {
+  habitacion(HabNum: Int): Habitacion,
+  habitaciones: [Habitacion],
+  monedasList: [Moneda],
+  monedasGet(id: Int!): Moneda
+}

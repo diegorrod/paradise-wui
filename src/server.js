@@ -1,15 +1,13 @@
-import { makeExecutableSchema } from 'graphql-tools'
 import express from 'express'
 import cors from 'cors'
 import gqlMiddleware from 'express-graphql'
 import resolvers from './graphql/resolvers'
-import typeDefs from './graphql/schema.graphql'
+import { schema } from './graphql/schema'
 
 const app = express()
 // const isDev = process.env.NODE_ENV !== 'production'
 
 // definiendo el esquema
-const schema = makeExecutableSchema({ typeDefs, resolvers })
 
 app.use(cors())
 

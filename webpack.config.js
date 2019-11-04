@@ -20,6 +20,11 @@ module.exports = {
         exclude: /node_modules/,
         test: /\.graphql$/,
         use: [{ loader: 'graphql-import-loader' }]
+      },
+      {
+        exclude: /node_modules/,
+        test: /\.gql$/,
+        use: [{ loader: 'graphql-import-loader' }]
       }
     ]
   }
